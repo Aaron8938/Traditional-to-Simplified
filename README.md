@@ -54,10 +54,38 @@ Traditional to Simplified/
 
 1. 双击 `.dmg` 文件，弹出安装窗口。
 2. 将 **Traditional to Simplified** 拖到 **Applications** 文件夹。
-3. 首次打开 App 时，系统可能提示「无法验证开发者」—— 右键点击 App，选择 **打开**，再点 **打开** 确认即可。
-4. 启动 App 后，会自动弹出 Safari 引导页，点击按钮跳转到 **Safari → 设置 → 扩展**。
-5. 勾选 **Traditional to Simplified**，确认权限提示。
-6. 安装完成，打开任意繁体网站即可看到自动转换效果。
+3. 启动 App 后，会自动弹出 Safari 引导页，点击按钮跳转到 **Safari → 设置 → 扩展**。
+4. 勾选 **Traditional to Simplified**，确认权限提示。
+5. 安装完成，打开任意繁体网站即可看到自动转换效果。
+
+---
+
+### ⚠️ 重要：首次打开无法启动的解决办法（必读）
+
+由于本应用使用开发证书签名，未经过 Apple 公证（Notarization），macOS 会阻止启动并提示「无法打开，因为无法验证开发者」或「已损坏」。
+
+**这是正常现象，应用本身没有任何问题。** 请按以下任一方式解决：
+
+#### 方式一：终端命令（推荐，最可靠）
+
+打开「终端」App，粘贴以下命令并回车（会要求输入你的开机密码，输入时不显示字符，输完直接回车）：
+
+```bash
+sudo xattr -rd com.apple.quarantine /Applications/Traditional\ to\ Simplified.app
+```
+
+执行完成后，直接双击 App 即可正常打开，之后都不会再出现任何提示。
+
+#### 方式二：右键打开（部分 macOS 版本可用）
+
+1. 在「访达」→「应用程序」中找到 **Traditional to Simplified**。
+2. **按住 Control 键点击** App 图标（或右键点击），选择 **打开**。
+3. 弹窗中选择 **打开** 确认。
+4. 之后正常双击即可打开。
+
+> 如果右键打开无效（部分 macOS 版本会仍然阻止），请使用上面的终端命令方式。
+
+---
 
 ### 从源码构建
 
