@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="popup.css">
-    <script type="module" src="popup.js"></script>
 </head>
 <body>
-    <strong>Hello World!</strong>
+    <div class="container">
+        <div class="header" id="header">繁体转简体</div>
+        <div class="toggle-row">
+            <span class="label" id="label-convert">自动转换</span>
+            <label class="switch">
+                <input type="checkbox" id="toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toggle-row">
+            <span class="label" id="label-lang">
+                <span id="lang-current">中文</span>
+                <span class="lang-divider">/</span>
+                <span id="lang-alt">English</span>
+            </span>
+            <label class="switch">
+                <input type="checkbox" id="lang-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="status" id="status">转换已开启</div>
+    </div>
+    <script src="popup.js"></script>
 </body>
 </html>

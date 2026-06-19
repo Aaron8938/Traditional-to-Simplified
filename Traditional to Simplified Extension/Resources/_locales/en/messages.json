@@ -1,10 +1,10 @@
 {
     "extension_name": {
-        "message": "Traditional to Simplified Extension",
+        "message": "Traditional to Simplified",
         "description": "The display name for the extension."
     },
     "extension_description": {
-        "message": "This is Traditional to Simplified Extension. You should tell us what your extension does here.",
+        "message": "Automatically convert Traditional Chinese to Simplified Chinese on web pages.",
         "description": "Description of what the extension does."
     }
 }
