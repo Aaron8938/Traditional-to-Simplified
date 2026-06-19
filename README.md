@@ -44,36 +44,36 @@ Traditional to Simplified/
 └── Traditional to Simplified.xcodeproj/       # Xcode 工程
 ```
 
-## 构建与安装
+## 安装
 
-### 环境要求
+### 下载 DMG 安装包
 
-- macOS 11 (Big Sur) 或更高版本
-- Xcode 16 或更高版本
-- Safari 14 或更高版本
+从 [GitHub Releases](https://github.com/Aaron8938/Traditional-to-Simplified/releases) 下载最新的 `Traditional to Simplified 1.0.0.dmg`。
+
+### 安装步骤
+
+1. 双击 `.dmg` 文件，弹出安装窗口。
+2. 将 **Traditional to Simplified** 拖到 **Applications** 文件夹。
+3. 首次打开 App 时，系统可能提示「无法验证开发者」—— 右键点击 App，选择 **打开**，再点 **打开** 确认即可。
+4. 启动 App 后，会自动弹出 Safari 引导页，点击按钮跳转到 **Safari → 设置 → 扩展**。
+5. 勾选 **Traditional to Simplified**，确认权限提示。
+6. 安装完成，打开任意繁体网站即可看到自动转换效果。
 
 ### 从源码构建
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Aaron8938/Traditional-to-Simplified.git
 cd "Traditional to Simplified"
 xcodebuild -project "Traditional to Simplified.xcodeproj" \
            -scheme "Traditional to Simplified" build
 ```
 
-### 在 Safari 中启用
-
-1. 用 Xcode 打开工程，运行（⌘R）一次以安装宿主 App。
-2. 打开 **Safari → 设置 → 扩展**，勾选「Traditional to Simplified」。
-3. 在弹出的权限提示中允许扩展访问网页内容。
-4. 点击工具栏中的扩展图标，确认「自动转换」处于开启状态即可。
-
 ## 使用方法
 
 - 点击 Safari 工具栏中的扩展图标，弹出菜单提供两个开关：
-  - **自动转换**：开启 / 关闭繁简转换。
-  - **语言切换**：切换弹出菜单的界面语言（中文 / English）。
-- 转换状态会自动记住，下次打开 Safari 时沿用上次的设置。
+  - **自动转换**：开启 / 关闭繁简转换，关闭后网页立即恢复原文。
+  - **语言切换**：切换弹出菜单的界面语言（中文 / English），默认跟随系统语言。
+- 转换状态和语言偏好会自动记住，下次使用时沿用。
 
 ## 技术栈
 
